@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    background-color: #0b1522;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+p{
+    margin-top: 50px;
+    text-align: center;
+    color: #f20044;
+}
+
+h1{
+   color: #f20044;
+    text-align: center;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.p1, .p2, .p3, .p4{
+    max-width: 1000px;
+    margin-bottom: -30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #ffff;
+    font-size: 20px;
+}
+
+.cont {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    margin: 100px 30px 10px 30px;
+}
+
+.after, .before{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.heart{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background-color: #ff0000;
+    transform: rotate(45deg);
+    box-shadow: -10px 10px 90px #f20044;
+    animation: hrtbeat 1.4s linear infinite;
+}
+
+
+.heart::before{
+    content: '';
+    position: absolute;
+    background-color:#ff0000;
+    width: 70px;
+    height: 70px;
+    transform: translateY(-50%);
+    border-radius: 50px;
+}
+
+.heart::after {
+    content: '';
+    position: absolute;
+    background-color:#ff0000;
+    width: 70px;
+    height: 70px;
+    transform: translateX(-50%);
+    border-radius: 50px;
+}
+
+.heart1 {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border: 1px solid white;
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg);
+}
+
+.heart1::before {
+    content: '';
+    position: absolute;
+    border: 2px solid white;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+    width: 70px;
+    height: 70px;
+    transform: translateY(-50%);
+    border-radius: 50px;
+}
+
+.heart1::after {
+    content: '';
+    position: absolute;
+    border: 2px solid white;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    width: 70px;
+    height: 70px;
+    transform: translateX(-50%);
+    border-radius: 50px;
+}
+
+@keyframes hrtbeat{
+    0%{
+        transform: rotate(45deg) scale(1);
+    }
+    20%{
+        transform: rotate(45deg) scale(1);
+    }
+    40%{
+        transform: rotate(45deg) scale(1.4);
+    }
+    60%{
+        transform: rotate(45deg) scale(1.2);
+    }
+    80%{
+        transform: rotate(45deg) scale(1.4);
+    }
+    100%{
+        transform: rotate(45deg) scale(1);
+    }
+}
